@@ -1,0 +1,26 @@
+.project{
+    margin-top:2em;
+    padding:1em;
+    background-color:#ece4e4;
+}
+.project h2{
+    text-align: center;
+    position:relative;
+}
+.project h2::after{
+    content:'My lastest project';
+    position:absolute;
+    bottom:-80%;
+    left:0;
+    font-size:.8rem;
+    height:100%;
+    width:100%;
+    color:#ea6028;
+}
+.project__card{
+    margin-top:2em;
+}
+.project__card img{
+    width:100%;
+    
+}

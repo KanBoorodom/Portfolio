@@ -1,0 +1,52 @@
+.header{
+    display:flex;
+    flex-direction: column;
+    padding:.5em;
+    background-color: #ece4e4;
+    min-width: 320px;
+}
+.header__imgageContainer{
+    margin-top: 2em;
+    height: 300px;
+    border-radius: 100%;
+    background-color: #f2d261;
+    background-image: url(https://github.com/KanBoorodom/cryptocurrency/blob/master/src/component/illust/mee.png?raw=true);
+    background-size: 120%;
+    background-position: center;
+    border: 8px solid #ece4e4;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.header p{
+    font-weight: 400;
+    font-size:1.95rem;
+}
+.header :nth-child(3){
+    font-size: 1.35rem;
+    color:#5C5858;
+}
+.header :nth-child(4){
+    color:#66520c;
+    position:relative;
+    font-size:1.5rem;
+    font-weight: 500;
+    width:fit-content;
+    margin:1em auto;
+    cursor:pointer;
+}
+.header :nth-child(4)::after{
+    content:'';
+    position:absolute;
+    background: #f7ff00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 250% 100%;
+    width:70%;
+    height:25%;
+    left:15%;    
+    bottom:-20%;
+    transition: all ease 1s;
+}
+.header :nth-child(4):hover::after{
+    background-position: 100% 0;
+    transition: all ease 1s;
+}
