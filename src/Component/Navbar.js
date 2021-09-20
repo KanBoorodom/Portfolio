@@ -15,8 +15,8 @@ const Navbar = () => {
                 <ul>
                     <li onClick = {clickHandle}><a href="#head">Home</a></li>
                     <li onClick = {clickHandle}><a href="#ab">About</a></li>
-                    <li onClick = {clickHandle}><a href="">Project</a></li>
-                    <li onClick = {clickHandle}><a href="">Contact</a></li>
+                    <li onClick = {clickHandle}><a href="#prj">Project</a></li>
+                    <li onClick = {clickHandle}><a href="#ctc">Contact</a></li>
                 </ul>
             </nav>
         </div>

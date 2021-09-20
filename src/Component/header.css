@@ -16,6 +16,18 @@
     border: 8px solid #ece4e4;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
+.header__social{
+    background-color: #f2d261;
+    width: 50%;
+    padding:.5em;
+    border-radius: 15px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.fa-line,.fa-github-square{
+    font-size:1.75rem;
+}
 .header p{
     font-weight: 400;
     font-size:1.95rem;

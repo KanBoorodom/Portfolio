@@ -18,7 +18,7 @@ const About = () => {
                 <img className = "aboutInfo__img" src= {abooutImg} alt="about pic" />
                 <div>
                     <p className = "aboutInfo__p">
-                        I use to be a nutriontionist but also interesting in coding.
+                        I use to be a nutritionist but also interesting in coding.
                         I love to create a website and interesting in web design. 
                         I'm ready for a new experience and eager to learn a new thing.
                         I wish I have an oppotunity to work with you.
