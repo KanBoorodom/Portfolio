@@ -12,6 +12,7 @@ function App() {
       <About />
       <Project />
       <Contact />
+      <footer style = {{backgroundColor:'#ece4e4',color:'#695f58',textAlign:'center',padding:'1em'}}>© 2021 Kan's Portfolio all right reserved.</footer>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import emailjs from 'emailjs-com'
 import './contact.css'
 const Contact = () => {
     const [info,setInfo] = useState({
@@ -7,6 +8,7 @@ const Contact = () => {
         'subject':'',
         'message':'',
     })
+    const [emailSend,setEmailSend] = useState(false)
 
     const handleChange = (e)=>{
         setInfo({...info,
@@ -16,12 +18,19 @@ const Contact = () => {
     }
     const handleSubmit = (e)=>{
         e.preventDefault()
+        emailjs.sendForm('service_mgqgy9c','template_uvdrpmi',e.target,"user_DDOWzdc1UKYmshdaLJuYV")
+        .then(response => console.log(response))
+        .catch(err => console.log(err))
+        setEmailSend(true)
         setInfo({
             'name':'',
             'email':'',
             'subject':'',
             'message':'',
         })
+    }
+    const close = ()=>{
+        setEmailSend(false)
     }
     return (
         <div className = 'contact' id = 'ctc'>
@@ -67,6 +76,12 @@ const Contact = () => {
                     type="submit"
                 />
             </form>
+            {emailSend && 
+                <div className = 'sendEmail' >
+                    <p>Thank you, I hope I have a chance to collaborate with you in the future.</p>    
+                    <button onClick = {close}>CLOSE</button>
+                </div>        
+            }
         </div>
     )
 }

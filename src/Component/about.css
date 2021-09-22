@@ -8,7 +8,7 @@
     font-weight: 400;
 }
 .about__info{
-    margin-bottom:2em;
+    margin-bottom:.5em;
 }
 .aboutInfo__p{
     font-size: 1.15rem;
@@ -18,6 +18,8 @@
 }
 .aboutInfo__img{
     width:80%;
+    max-width: 350px;
+    max-height: 350px;
     display:block;
     margin:1em auto;
     border-radius: 15px;
@@ -29,6 +31,7 @@
 }
 .aboutEx__header p{
     padding:.25em .5em;
+    cursor:pointer;
 }
 .aboutEx__header--active{
     background-color:#ea6028;
@@ -41,11 +44,11 @@
 .aboutEx__info{
     margin-top:1em;
     padding:.25em 1em;
-    /* text-align: center; */
 }
 .about__skill{
     background-color:#f2d261;
     text-align: center;
+    margin-top:2em;
     padding:.5em 1em;
     border-radius: 10px;
 }
@@ -55,4 +58,45 @@
 .about__skill p{
     font-weight: 600;
     color:#473c13;
+}
+@media only screen and (min-width:450px) {
+    .aboutInfo__p{
+        padding:1em;
+        text-align: center;
+    }
+}
+@media only screen and (min-width:768px) {
+    .about{
+        padding:1.5em;
+    }
+    .about__experience{
+        width:80%;
+        margin:auto;
+    }
+}
+@media only screen and (min-width:1000px) {
+    .about{padding-top: 3em;}
+    .about h2{
+        font-size:2.5rem;
+    }
+    .about__info{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .aboutInfo__p{
+        width:90%;
+        text-align: left;
+    }
+    .about__experience{
+        width:95%;
+    }
+    .aboutInfo__img{
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .about__skill{
+        width:65%;
+        margin:3em auto 0;
+    }
+
 }

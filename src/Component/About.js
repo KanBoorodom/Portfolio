@@ -3,9 +3,9 @@ import './about.css'
 import abooutImg from './img/aboutimage.jpg'
 const About = () => {
     const [studyExp,setStudyExp] = useState(true)
-    const study = [{year:'20xx - 20xx : ',info:'Graduated from Srinakharinwirot University'},
-                    {year:'20xx - Now : ',info:'Ramkamheang University'},
-                    {year:'20xx - Now : ',info:'National Institute of Development Administration'},]
+    const study = [{year:'2012 - 2016                   : ',info:'Graduated from Srinakharinwirot University'},
+                    {year:'2019 - Now : ',info:'Ramkhamhaeng University'},
+                    {year:'2019 - Now : ',info:'National Institute of Development Administration'},]
     const clickHandle = (e)=>{
         if(e.target.innerHTML !== 'Education' || !studyExp){
             setStudyExp(!studyExp)
@@ -21,10 +21,10 @@ const About = () => {
                         I use to be a nutritionist but also interesting in coding.
                         I love to create a website and interesting in web design. 
                         I'm ready for a new experience and eager to learn a new thing.
-                        I wish I have an oppotunity to work with you.
+                        I wish I have an oppotunity to work together with you.
                     </p>
-                    <div>
-                        <h2 style = {{color:'#de0000'}}>My Experience</h2>
+                    <h2 style = {{color:'#de0000'}}>My Experience</h2>
+                    <div className = "about__experience">
                         <div>
                             <div className = "aboutEx__header">
                                 <p className = {studyExp ? 'aboutEx__header--active' : ''} onClick = {clickHandle}>Education</p>
@@ -33,25 +33,25 @@ const About = () => {
                             <div className = "aboutEx__info">
                                 {
                                     studyExp ? study.map((s,index)=>{
-                                        return  <p key = {index}>
+                                        return  <p key = {index} style = {{padding:'1em 0',borderBottom:'2px solid #e1b3b3'}}>
                                                     <span style = {{fontWeight:'600'}}>{s.year}</span>
                                                     {s.info}
                                                 </p>
                                     })
                                     : 
                                     <p>
-                                        <span style = {{fontWeight:'600'}}>20xx - 20xx : </span>
+                                        <span style = {{fontWeight:'600'}}>2017 - 2019 : </span>
                                         Nutritionist at Sodexo
                                     </p>
                                 }
+                                <div className = "about__skill">
+                                    <h2>My Skill</h2>
+                                    <p>HTML,CSS,JS,React JS,Python</p>
+                                </div>
                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className = "about__skill">
-                <h2>My Skill</h2>
-                <p>HTML,CSS,JS,React JS,Python</p>
             </div>
         </section>
     )

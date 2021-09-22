@@ -1,6 +1,7 @@
 .contact{
+    position:relative;
     background-color: #f2d261;
-    padding:1em;
+    padding:1em 1em 4em;
 }
 .contact h2{
     color:#645825;
@@ -27,19 +28,21 @@
 }
 .contact__form input:focus,.contact__form textarea:focus{
     background-color:white;
-}
+    outline: none;
+ }
 
 .contactForm__submit{
     background: #f7ff00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: 110%;
+    background-size: 150%;
     width:80%;
     align-self: center;
     border-radius: 12px;
     font-size:1.15rem;
     font-weight: 500;
     transition: all ease 1s;
+    cursor:pointer;
 }
 .contactForm__submit:hover{
     background-position: 100% 0;
@@ -48,7 +51,45 @@
 input:valid,textarea:valid {
     background-color: #ddffdd;
   }
-  
+  .sendEmail{
+      position:fixed;
+      z-index:999;
+      border-radius: 15px;
+      top:40%;
+      font-weight: 600;
+      text-align: center;
+      background-color:white;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      width:90%;
+      margin:auto;
+      padding:.5em;
+}
+.sendEmail button{
+    font-weight: 500;
+    margin-top:1em;
+    padding:.125em .7em;
+}
 /* input:invalid,textarea:invalid {
     background-color: #f28b8b;
   } */
+
+  @media only screen and (min-width:700px) {
+    .contact{
+        padding-top:3em;
+    }
+    .contact h2{
+        font-size:1.75rem;
+    }
+    .contact__form{
+        width:50%;
+        margin:1em auto;
+    }
+    .contactForm__submit{
+        width:50%;
+    }
+}
+@media only screen and (min-width:1000px) {
+    .contact h2{
+        font-size:2.5rem;
+    }
+}

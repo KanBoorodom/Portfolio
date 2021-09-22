@@ -30,7 +30,7 @@ nav{
     z-index:10;
     background:#f2e1a5;
     height:100vh;
-    left:-1000px;
+    left:-100%;
     transition:all 1s;
 }
 .navbar__nav--active{
